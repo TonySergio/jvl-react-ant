@@ -1,25 +1,5 @@
-[Русский](./README.ru-RU.md) | English | [简体中文](./README.zh-CN.md)
+# JVL SAS Test Tool
 
-# Ant Design Pro
-[![CircleCI Status](https://circleci.com/gh/ant-design/ant-design-pro.svg?style=svg)](https://circleci.com/gh/ant-design/ant-design-pro/)
-[![Dependencies](https://img.shields.io/david/ant-design/ant-design-pro.svg)](https://david-dm.org/ant-design/ant-design-pro)
-[![DevDependencies](https://img.shields.io/david/dev/ant-design/ant-design-pro.svg)](https://david-dm.org/ant-design/ant-design-pro#info=devDependencies&view=list)
-[![Gitter](https://badges.gitter.im/ant-design/ant-design-pro.svg)](https://gitter.im/ant-design/ant-design-pro?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-
-An out-of-box UI solution for enterprise applications as a React boilerplate.
-
-![](https://gw.alipayobjects.com/zos/rmsportal/xEdBqwSzvoSapmnSnYjU.png)
-
-- Preview: http://preview.pro.ant.design
-- Home Page: http://pro.ant.design
-- Documentation: http://pro.ant.design/docs/getting-started
-- ChangeLog: http://pro.ant.design/docs/changelog
-- FAQ: http://pro.ant.design/docs/faq
-- Mirror Site in China: http://ant-design-pro.gitee.io
-
-## Translation Recruitment :loudspeaker:
-
-We need your help: https://github.com/ant-design/ant-design-pro/issues/120
 
 ## Features
 
@@ -36,10 +16,6 @@ We need your help: https://github.com/ant-design/ant-design-pro/issues/120
 ## Templates
 
 ```
-- Dashboard
-  - Analytic
-  - Monitor
-  - Workspace
 - Form
   - Basic Form
   - Step Form
@@ -48,10 +24,6 @@ We need your help: https://github.com/ant-design/ant-design-pro/issues/120
   - Standard Table
   - Standard List
   - Card List
-  - Search List (Project/Applications/Article)
-- Profile
-  - Simple Profile
-  - Advanced Profile
 - Result
   - Success
   - Failed
@@ -68,21 +40,12 @@ We need your help: https://github.com/ant-design/ant-design-pro/issues/120
 ## Usage
 
 ```bash
-$ git clone https://github.com/ant-design/ant-design-pro.git --depth=1
+$ git clone https://github.com/TonySergio/jvl-react-ant --depth=1
 $ cd ant-design-pro
 $ npm install
 $ npm start         # visit http://localhost:8000
 ```
 
-Or you can use the command tool: [ant-design-pro-cli](https://github.com/ant-design/ant-design-pro-cli)
-
-```bash
-$ npm install ant-design-pro-cli -g
-$ mkdir pro-demo && cd pro-demo
-$ pro new
-```
-
-More instructions at [documentation](http://pro.ant.design/docs/getting-started).
 
 ## Browsers support
 
@@ -92,10 +55,3 @@ Modern browsers and IE11.
 | --------- | --------- | --------- | --------- | --------- |
 | IE11, Edge| last 2 versions| last 2 versions| last 2 versions| last 2 versions
 
-## Contributing
-
-Any type of contribution is welcome, here are some examples of how you may contribute to this project:
-
-- Use Ant Design Pro in your daily work.
-- Submit [issues](http://github.com/ant-design/ant-design-pro/issues) to report bugs or ask questions.
-- Propose [pull requests](http://github.com/ant-design/ant-design-pro/pulls) to improve our code.
