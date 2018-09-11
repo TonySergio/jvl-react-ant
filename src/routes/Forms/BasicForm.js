@@ -74,7 +74,7 @@ export default class BasicForms extends PureComponent {
         <Card bordered={false}>
           <Form onSubmit={this.handleSubmit} hideRequiredMark style={{ marginTop: 8 }}>
             <FormItem {...formItemLayout} label="Machine serial number">
-              {getFieldDecorator('title', {
+              {getFieldDecorator('no', {
                 rules: [
                   {
                     required: true,

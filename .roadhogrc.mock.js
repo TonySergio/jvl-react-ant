@@ -55,7 +55,7 @@ const proxy = {
   'POST /api/rule': {
     $params: {
       pageSize: {
-        desc: '分页',
+        desc: '-',
         exp: 2,
       },
     },

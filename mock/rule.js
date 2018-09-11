@@ -97,13 +97,13 @@ export function postRule(req, res, u, b) {
       const i = Math.ceil(Math.random() * 10000);
       tableListDataSource.unshift({
         key: i,
-        href: 'https://ant.design',
+        href: 'gogo',
         avatar: [
           'https://gw.alipayobjects.com/zos/rmsportal/eeHMaZBwmTvLdIwMfBpg.png',
           'https://gw.alipayobjects.com/zos/rmsportal/udxAbMEhpwthVVcjLXik.png',
         ][i % 2],
-        no: `TradeCode ${i}`,
-        title: `一个任务名称 ${i}`,
+        no: `Machine serial ${no}`,
+        title: `bla ${i}`,
         owner: '曲丽丽',
         description,
         callNo: Math.floor(Math.random() * 1000),
