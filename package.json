@@ -6,6 +6,7 @@
   "main": "src/main.js",
   "author": "antons",
   "scripts": {
+    "postinstall": "install-app-deps",
     "precommit": "npm run lint-staged",
     "start": "cross-env ESLINT=none roadhog dev",
     "start:no-proxy": "cross-env NO_PROXY=true ESLINT=none roadhog dev",
