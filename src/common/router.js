@@ -108,6 +108,9 @@ export const getRouterData = app => {
     //   // name: '工作台',
     //   // authority: 'admin',
     // },
+    '/list/table-list': {
+      component: dynamicWrapper(app, ['rule'], () => import('../routes/List/TableList')),
+    },
     '/list/basic-form': {
       component: dynamicWrapper(app, ['form'], () => import('../routes/Forms/BasicForm')),
     },
@@ -129,9 +132,7 @@ export const getRouterData = app => {
     // '/form/advanced-form': {
     //   component: dynamicWrapper(app, ['form'], () => import('../routes/Forms/AdvancedForm')),
     // },
-    '/list/table-list': {
-      component: dynamicWrapper(app, ['rule'], () => import('../routes/List/TableList')),
-    },
+
     // '/list/basic-list': {
     //   component: dynamicWrapper(app, ['list'], () => import('../routes/List/BasicList')),
     // },

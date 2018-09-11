@@ -32,7 +32,7 @@ const getValue = obj =>
     .map(key => obj[key])
     .join(',');
 const statusMap = ['default', 'processing', 'success', 'error'];
-const status = ['关闭', '运行中', '已上线', '异常'];
+const status = ['network problem', 'in process', 'ready', 'failed'];
 
 const CreateForm = Form.create()(props => {
   const { modalVisible, form, handleAdd, handleModalVisible } = props;
@@ -336,7 +336,7 @@ export default class TableList extends PureComponent {
         dataIndex: 'callNo',
         sorter: true,
         align: 'right',
-        render: val => `${val} 万`,
+        render: val => `${val}`,
         // mark to display a total number
         needTotal: true,
       },
@@ -373,12 +373,12 @@ export default class TableList extends PureComponent {
         render: val => <span>{moment(val).format('YYYY-MM-DD HH:mm:ss')}</span>,
       },
       {
-        title: '操作',
+        title: 'Operations',
         render: () => (
           <Fragment>
-            <a href="">配置</a>
+            <a href="">Edit Configs</a>
             <Divider type="vertical" />
-            <a href="">订阅警报</a>
+            <a href="">Subscribe to failure</a>
           </Fragment>
         ),
       },
@@ -386,8 +386,8 @@ export default class TableList extends PureComponent {
 
     const menu = (
       <Menu onClick={this.handleMenuClick} selectedKeys={[]}>
-        <Menu.Item key="remove">删除</Menu.Item>
-        <Menu.Item key="approval">批量审批</Menu.Item>
+        <Menu.Item key="remove">remove</Menu.Item>
+        <Menu.Item key="approval">ping test</Menu.Item>
       </Menu>
     );
 
@@ -407,10 +407,10 @@ export default class TableList extends PureComponent {
               </Button>
               {selectedRows.length > 0 && (
                 <span>
-                  <Button>批量操作</Button>
+                  <Button>Show bytes</Button>
                   <Dropdown overlay={menu}>
                     <Button>
-                      更多操作 <Icon type="down" />
+                      Additional operations <Icon type="down" />
                     </Button>
                   </Dropdown>
                 </span>
