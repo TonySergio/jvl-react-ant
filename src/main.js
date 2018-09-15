@@ -2,9 +2,6 @@ const path = require('path');
 const url = require('url');
 const { app, crashReporter, BrowserWindow, Menu } = require('electron');
 
-if (!process.env.NODE_ENV) {
-  process.env.NODE_ENV = 'development';
-}
 const isDevelopment = process.env.NODE_ENV === 'development';
 
 console.log('isDevelopment=', isDevelopment);
@@ -70,9 +67,11 @@ app.on('ready', async () => {
       })
     );
   } else {
+    console.log('DIR_NAME: ', __dirname);
+
     mainWindow.loadURL(
       url.format({
-        pathname: path.join(__dirname, '/../', 'index.html'),
+        pathname: path.join(__dirname, 'index.html'),
         protocol: 'file:',
         slashes: true,
       })
