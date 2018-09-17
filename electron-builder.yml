@@ -31,6 +31,7 @@ mac:
 
 win:
   target: portable
+  icon: src/assets/jvl.ico
 
 linux:
   target:
