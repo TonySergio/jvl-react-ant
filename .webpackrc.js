@@ -6,6 +6,10 @@ export default {
   env: {
     development: {
       extraBabelPlugins: ['dva-hmr'],
+      publicPath: '/',
+    },
+    production: {
+      publicPath: '',
     },
   },
   externals: {
@@ -18,13 +22,19 @@ export default {
   ignoreMomentLocale: true,
   theme: './src/theme.js',
   html: {
+    title: 'SAS Test Tool',
     template: './src/index.ejs',
   },
   lessLoaderOptions: {
     javascriptEnabled: true,
   },
   disableDynamicImport: true,
-  publicPath: '/',
   hash: true,
   outputPath: 'build',
+  copy: [
+    {
+      from: 'src/main.js',
+      to: 'main.js',
+    },
+  ],
 };
