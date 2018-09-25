@@ -37,14 +37,47 @@
   - Register Result
 ```
 
-## Usage
+## Requires
+```
+- Node.js v8.11.3
+- Yarn 1.7.0
+
+```
+
+##Install project
 
 ```bash
 $ git clone https://github.com/TonySergio/jvl-react-ant --depth=1
 $ cd ant-design-pro
-$ npm install
-$ npm start         # visit http://localhost:8000
+$ yarn install
 ```
+
+
+## Usage (development)
+
+```bash
+$ yarn start         #  start dev server on http://localhost:8000
+```
+
+Also start App with Electron
+
+```bash
+$ yarn start:desktop # open desktop app 
+
+```
+
+
+##Usage (prod)
+
+Make build for target architecture:
+
+```bash
+$ yarn pack:win
+```
+
+
+
+
 
 
 ## Browsers support
