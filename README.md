@@ -44,7 +44,7 @@
 
 ```
 
-##Install project
+## Install project
 
 ```bash
 $ git clone https://github.com/TonySergio/jvl-react-ant --depth=1
@@ -67,7 +67,7 @@ $ yarn start:desktop # open desktop app
 ```
 
 
-##Usage (prod)
+## Usage (prod)
 
 Make build for target architecture:
 
