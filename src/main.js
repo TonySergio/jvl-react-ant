@@ -2,9 +2,8 @@ const path = require('path');
 const url = require('url');
 const { app, crashReporter, BrowserWindow, Menu } = require('electron');
 
-const isDevelopment = false; //process.env.NODE_ENV === 'development';
+const isDevelopment = process.env.NODE_ENV === 'development';
 
-console.log(`process.env.NODE_ENV: ${process.env.NODE_ENV}`);
 console.log('isDevelopment=', isDevelopment);
 
 const APP_NAME = isDevelopment ? 'SAS Test Tool (development)' : 'SAS Test Tool';

@@ -8,7 +8,8 @@
   "scripts": {
     "postinstall": "install-app-deps",
     "precommit": "npm run lint-staged",
-    "start": "cross-env ESLINT=none roadhog dev",
+    "start": "run-s private:clean private:copy-main start-dev",
+    "start-dev": "cross-env ESLINT=none BROWSER=none roadhog dev",
     "start:no-proxy": "cross-env NO_PROXY=true ESLINT=none roadhog dev",
     "site": "roadhog-api-doc static && gh-pages -d dist",
     "analyze": "cross-env ANALYZE=true roadhog build",
@@ -21,13 +22,14 @@
     "test:component": "roadhog test ./src/components",
     "test:all": "node ./tests/run-tests.js",
     "prettier": "prettier --write ./src/**/**/**/*",
-    "start:desktop": "electron . NODE_ENV=development",
+    "start:desktop": "cross-env NODE_ENV=development electron .",
     "pack:win": "run-s private:clean private:compile private:build:win",
     "pack:linux": "run-s private:clean private:compile private:build:linux",
     "private:compile": "cross-env ESLINT=none roadhog build",
     "private:build:win": "build --win",
     "private:build:linux": "build --linux",
-    "private:clean": "rimraf build"
+    "private:clean": "rimraf build",
+    "private:copy-main": "copyfiles -f src/main.js build"
   },
   "dependencies": {
     "@antv/data-set": "^0.9.0",
@@ -76,6 +78,7 @@
     "babel-preset-es2015": "6.1.18",
     "babel-preset-react": "6.24.1",
     "babel-preset-stage-2": "6.24.1",
+    "copyfiles": "^2.1.0",
     "cross-env": "^5.1.1",
     "cross-port-killer": "^1.0.1",
     "electron": "2.0.9",

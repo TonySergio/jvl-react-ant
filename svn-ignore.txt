@@ -1,0 +1,17 @@
+node_modules/
+src/utils/request-temp.js
+
+dist/
+build/
+
+*.idea
+*.iml
+*.yarn.lock
+package-lock.json
+jsconfig.json
+.history
+*.log
+
+.temp/
+.umi
+.umi-production
