@@ -6,7 +6,7 @@ build/
 
 *.idea
 *.iml
-*.yarn.lock
+yarn.lock
 package-lock.json
 jsconfig.json
 .history
